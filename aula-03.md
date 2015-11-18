@@ -122,5 +122,8 @@ pessoa {
   andar: [function],
   aniversario: [function]
 }
-
 ```
+
+#####Definição de métodos
+
+Propriedades que recebem funções são chamadas de métodos.
