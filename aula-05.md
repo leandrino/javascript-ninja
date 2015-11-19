@@ -1,0 +1,107 @@
+#Javscript Ninja - Aula 5#
+
+## Retorno de Funções
+
+###Arrays
+
+Dentro das functions, já vimos que podemos retornar valores primitivos, agora vamos ver que podemos retornrar arrays por exemplo.
+
+```javascript
+function myFunction() {
+  return [1, 2, 3];
+}
+myFunction();
+// [ 1, 2, 3 ]
+myFunction()[1];
+//2
+myFunction()[5];
+//undefined
+```
+
+###Objetos
+
+Também podemos retornar objetos.
+
+```javascript
+function myFunction() {
+  return {
+    prop1: 1,
+    prop2:'Leandro',
+    prop3: function(){
+      return 'prop3'
+    }
+  };
+}
+myFunction();
+/*
+{
+ prop1:1
+ prop2:'Leandro'
+ prop3: [function]
+}
+*/
+myFunction().prop1;
+//1
+myFunction().prop2;
+//'Leandro'
+var values = myFunction(); //Podemos atribuir estafunção em uma variável, que assumirá suas propriedades.
+values
+/*
+{
+ prop1:1
+ prop2:'Leandro'
+ prop3: [function]
+}
+*/
+values.prop2;
+//'Leandro'
+values.prop3();
+//'prop3'
+```
+
+##Parametros de funções
+
+Trabalhando um pouco com parâmetros dentro das funções.
+
+```javascript
+var arr = [1, 2, 3];
+function myFunction(arg) {
+  return arg[1];
+};
+myFunction(arr);
+//2
+function myFunction2(arg) {
+  return arg;
+}
+myFunction2([ 1, 'Leandro, true, 29']);
+/*
+[
+  1,
+  'Leandro',
+  true,
+  29
+]
+*/
+```
+
+Funciona também com objetos.
+
+```javascript
+var obj = {
+  propriedade: 'Leandro',
+  curso: 'Javascritp Ninja',
+  ninja: true
+}
+function myFunction(arg) {
+  return arg;
+}
+myFunction(obj);
+//Object {propriedade: "Leandro", cruso: "Javascritp Ninja", ninja: true}
+myFunction(obj).curso;
+//'Javascritp Ninja'
+function myFunction2(arg) {
+  return arg.propriedade; //Retornará algo se houver esta propriedade.
+}
+myFunction2(obj);
+//"Leandro"
+```
