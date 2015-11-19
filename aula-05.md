@@ -105,3 +105,34 @@ function myFunction2(arg) {
 myFunction2(obj);
 //"Leandro"
 ```
+#Observações#
+
+##Objetos com propriedades string
+
+Na correção dos exercício, foi aprofundado a forma de passar propriedades para os objetos em formato string, o no exemplo abaixo, ilustra como funciona este procedimento.
+
+```js
+function book(livro) {
+  var nomesLivros = {
+    'Clean Code': {
+      quantidadePaginas: 200,
+      autor: 'Martin',
+      editora: 'Vishh'
+    },
+    'jQuery': {
+      quantidadePaginas: 200,
+      autor: 'Maujor',
+      editora: 'NovaTec'
+    },
+    'Raulin o Comilão': {
+      quantidadePaginas: 600,
+      autor: 'Meche',
+      editora: 'Sem editora'
+    },
+  };
+
+  return !livro ? nomesLivros : nomesLivros[ livro ]; //Observe que ao chamar a propriedade do objeto, utilizamos as [] como uma array
+};
+```
+
+Em resumo, utilizamos a conotação ``` . ``` por ser mais rápida, a conotação ``` [' '] ``` será utilizado em ocasiões onde a propriedade está definida como string, apesar de ser mais lenta que o ``` . ``` ela funciona nos dois casos.
