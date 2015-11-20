@@ -136,3 +136,12 @@ function book(livro) {
 ```
 
 Em resumo, utilizamos a conotação ``` . ``` por ser mais rápida, a conotação ``` [' '] ``` será utilizado em ocasiões onde a propriedade está definida como string, apesar de ser mais lenta que o ``` . ``` ela funciona nos dois casos.
+
+##Concatenar
+
+No exercício sugerido, podemos otimizar a digitação de conteúdo criando uma variável conforme segue:
+
+```js
+var bookName = 'Raulin o Comilão';
+console.log( 'O livro ' + bookName + 'tem ' + book( bookName ).quantidadePaginas + 'páginas!');
+```
