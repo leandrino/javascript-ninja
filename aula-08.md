@@ -136,5 +136,16 @@ console.log( getCarColor(car) );
 No caso a seguir, estaremos passando dentro da primeira função a execução de outra determinada função, vamos ver como funciona?
 
 ```js
-    3:48 do vídeo #47
+function showOtherFunction(func) {
+    return func();
+}
+
+function returnedFunction() {
+    return 'Returned function';
+}
+
+console.log( showOtherFunction( returnedFunction ) );
 ```
+
+Nas funções acima, utilizamos ```showOtherFunction``` executará a função ```returnedFunction``` exibindo em tela 'Returned function'.
+
