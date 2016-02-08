@@ -1,9 +1,18 @@
-function showOtherFunction(func) {
-	return func();
+function sum() {
+	return 1+2;
 }
 
-function returnedFunction() {
-	return 'Returned function';
-}
+console.log( sum() );
 
-console.log( showOtherFunction( returnedFunction ) );
+var sum2 = function() {
+	return 3 + 2;
+};
+
+console.log( sum2() );
+
+var sum3 = function otherSum() {
+	return 5 + 8;
+};
+
+console.log( sum3() );
+console.log( otherSum() );
