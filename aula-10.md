@@ -34,3 +34,19 @@ test // '30'
 ```
 
 *Lembre-se, o JavaScript é uma linguagem de tipagem dinâmica, ele converte os tipos se achar necessário, é muito importante entender como funciona as conversões de valores*
+
+## typeof
+
+Testando tipos de valores. ```typeof``` é um operador unário que funciona ele mais um operando, exemplo: 
+
+```js
+typeof undefined; // 'undefined'
+typeof function() {}; // 'function'
+typeof true; // 'Boolean'
+typeof 10; // 'number'
+typeof NaN; // 'number'
+typeof 'JS Ninja'; //string
+typeof {}; //'object'
+typeof[]; // 'object'
+typeof null; // 'object' (erro na implementação)
+```
