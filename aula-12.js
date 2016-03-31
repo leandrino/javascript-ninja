@@ -88,3 +88,47 @@ for( var prop in cliente ) {
         console.log( prop );
     }
 }
+
+// Object.keys() - retorna as propriedades do objeto em formato de array
+
+console.log( Object.keys(obj).length );
+
+// .isPrototypeOf( ) - verifica se determinado objeto é protótipo de outro objeto, retorna true e false.
+
+console.log( obj.isPrototypeOf( obj2 ) );
+console.log( obj2.isPrototypeOf( obj ) );
+
+// JSON.stringfy(obj) - Transforma um objeto em string.
+
+console.log( JSON.stringify( obj ) ); //neste caso, ele transforma o objeto em padrão JSON.
+
+//JSON.parser(str) - Transforma um string em objeto novamente.
+
+var str = JSON.stringify( obj );
+console.log( str );
+console.log( JSON.parse( str ) );
+ 
+ //Alguns tipos de objetos que não parseia
+ // Mais informações sobre JSON - http://json.org/json2.js lá mostra tuod que parsei e transforma em string
+ 
+ // Arrays (tem muita coisa para ver)
+ 
+ //Criando itens no array.
+  
+ var arr = [];
+ arr[0] = 10;
+ arr[1] = 20;
+ arr[2] = 20;
+ arr[3] = 'cinco';
+ console.log( arr );
+ 
+ // .push() adiciona um ítem ao final do array.
+ 
+ arr.push( 'vinte' );
+ console.log( arr );
+ 
+ // .pop() remover itens no final do array
+ 
+ arr.pop();
+ console.log( arr );
+ 

@@ -44,7 +44,7 @@ Existem três formas de criar um objeto:
 
 ## ```Object.proptotype```
 
-Protótipo de objetos, esta propriedade prototype, ela é o prototipo do objeto criado. cada vez que criamos um objeto, ele herda do prórprio protótipo que conseguimos acessar com ```Objetct.prototype```.
+Protótipo de objetos, esta propriedade prototype, ela é o prototipo do objeto criado. cada vez que criamos um objeto, ele herda do prórprio protótipo as propriedade, que conseguimos acessar com ```Objetct.prototype```.
 
 Essa herança de objetos que temos no javascript encadeamento de protótipos.
 
@@ -121,6 +121,71 @@ for( var prop in cliente ) {
         console.log( prop ); //não retornará nada
     }
 }
+```
+### Object.keys()
+
+Retorna as propriedades do objeto em formato de array
+
+```js
+console.log( Object.keys(obj).length ); //2
+```
+
+### `.isPrototypeOf()`
+
+Verifica se determinado objeto é protótipo de outro objeto, retorna ```true``` ou ```false```
+
+```js
+console.log( obj.isPrototypeOf( obj2 ) ); //true
+console.log( obj2.isPrototypeOf( obj ) ); //false
+```
+
+## JSON.stringfy()
+
+Transforma determinado objeto em string padrão JSON, exemplos práticos estão no [arquivo da aula](aula-12.js), mas segue um pequeno exemplo:
+
+```js
+console.log( JSON.stringify( obj ) ); //neste caso, ele transforma o objeto em padrão JSON.
+```
+
+## JSON.parse()
+
+Faz o caminho inverso do ```JSON.stringfy()```, transforma determinado string padrão JSON em objeto,
+
+```js
+var str = JSON.stringify( obj );
+console.log( str );
+console.log( JSON.parse( str ) );
+```
+
+Existe uma especificação de tipos de objetos que não são transformados pelo ```stringfy``` e ```parse```, podem ser verificados pelo site [http://json.org/json2.js](http://json.org/json2.js).
+
+## Arrays - Criando itens.
+
+```js  
+ var arr = [];
+ arr[0] = 10;
+ arr[1] = 20;
+ arr[2] = 20;
+ arr[3] = 'cinco';
+ console.log( arr );
+```
+ 
+### .push()
+
+Adiciona um ítem ao final do array.
+
+```js 
+arr.push( 'vinte' );
+console.log( arr );
+```
+
+### .pop()
+
+Remove itens no final do array
+ 
+```js
+arr.pop();
+console.log( arr );
 ```
 
 [arquivo da aula](aula-12.js)
