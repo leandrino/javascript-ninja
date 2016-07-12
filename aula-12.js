@@ -151,9 +151,11 @@ arrStg.sort();
 console.log(arrStg);
 
 //Challenge-12
+
 /*
 Envolva todo o conteúdo desse arquivo em uma IIFE.
 */
+
 ;(function(){
 /*
 Crie um objeto chamado `person`, com as propriedades:
