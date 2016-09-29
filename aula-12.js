@@ -125,10 +125,13 @@ console.log( JSON.parse( str ) );
  // .push() adiciona um ítem ao final do array.
  
  arr.push( 'vinte' );
+ arr.push( 'vinte e um' );
  console.log( arr );
  
- // .pop() remover itens no final do array
+ // .pop() remover itens no final do array.
  
  arr.pop();
  console.log( arr );
+
+
  
