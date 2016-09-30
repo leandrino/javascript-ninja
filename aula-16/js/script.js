@@ -102,6 +102,7 @@
 
     /**
     * .split([separator] [, limit])
+    * usando join volta a ser string
     */
 
     console.log('Leandro'.split());
