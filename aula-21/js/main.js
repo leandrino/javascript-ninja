@@ -49,7 +49,7 @@
     //   console.log('fim')
 
     var counter = 0
-    var $button = doc.querySelector('[data-js="stop"]')
+        var $button = doc.querySelector('[data-js="stop"]')
     var temporizador
 
     function timer () {
